@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="#">
+    <link rel="stylesheet" href="style.css">
+    <title>Student Registration System</title>
+</head>
+<body>
+    
+    <header>
+        STUDENT REGISTRATION SYSTEM
+        <h4>[Inserting,Updating and Deleting Records with ease]</h4>
+    </header>
+
+    <main>
+        <section id="studentForm">
+            <!-- event.preventDefault() to stop form from refreshing on submission -->
+            <form onsubmit="event.preventDefault();">
+                <fieldset>
+                    <legend>Registration Form</legend>
+                    <br>
+                    <!-- Labels,Error fields(for displaying error msgs),Input fields to take input -->
+                    <label for="studentID">Student ID:</label>
+                    <span id="idError"></span><br>
+                    <input type="text" id="studentID" placeholder="Enter ID in numericals only..">
+                    <br><br>
+                    
+                    <label for="studentName">Student Name:</label>
+                    <span id="nameError"></span><br>
+                    <input type="text" id="studentName" placeholder="Enter your Name...">
+                    <br><br>
+                    
+                    <label for="studentEmail">Student Email:</label>
+                    <span id="mailError"></span><br>
+                    <input type="text" id="studentEmail" placeholder="Enter your Email address..." onkeydown="validateEmail()">
+                    <br><br>
+                    
+                    <label for="studentContact">Contact Number:</label>
+                    <span id="contactError"></span><br>
+                    <input type="text" id="studentContact" placeholder="Enter your Contact number...">
+                    
+                    <br><br>
+                    <!-- Both UPDATE and SUBMIT buttons : calling validateData(caller) and functions -->
+                     <!-- validateData('caller') so that we can apply different logic using same function -->
+                    <button type="submit" id="submitBtn" class="buttons" onclick="return validateData('submit')" onsubmit="formSave()">REGISTER</button> 
+                    <button type="submit" id="updateBtn" class="buttons" onclick="return validateData('update')" onsubmit="formUpdate()">UPDATE</button>
+                    
+                    
+                </fieldset>
+            </form>
+        </section>
+        <section id="studentList">
+            <fieldset>
+                <legend>Students List</legend>
+                <div id="studentDiv"  class="scroll-container">
+                    <!-- Display List Heading -->
+                    <div class="sgrid heading">
+                        <div class="item h">Student ID</div>
+                        <div class="item h">Name</div>
+                        <div class="item h">Email</div>
+                        <div class="item h">Contact</div>
+                        <div class="item h"></div>
+                    </div>
+
+                    <!-- Display List div to dynamically display all the records -->
+                    <div id="DisplayList"></div>
+                </div>
+                    
+            </fieldset>
+        </section>
+    </main>
+    <script src="code.js"></script>
+</body>
+</html>

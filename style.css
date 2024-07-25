@@ -1,0 +1,210 @@
+/* Styles applied to all body */
+body{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/* Header styling.. */
+header{
+    width: 100vw;
+    height: 10vh;
+    font-size:xx-large;
+    font-weight: 900;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.824);
+    color: white;
+    letter-spacing: 3px;
+    text-shadow: 2px 1px rgb(87, 86, 86);
+    padding-top: 15px;
+}
+
+header h4{
+    font-size:x-large;
+    
+}
+
+/* main styling.. */
+main{
+    margin-top: 0;
+    width:screen;
+    height: 100%;
+    background-color: rgb(119, 121, 124);
+    /* flex to display both form and display section side-by-side */
+    display: flex; 
+    justify-content: space-between;
+    padding: 40px;
+    padding-right: 35px;
+    gap: 20px;
+    flex-wrap:nowrap;
+    padding-bottom: 99px;
+}
+
+section{
+    margin-top: 30px;
+}
+
+/* FORM SECTION STYLING */
+#studentForm{
+    width: 30%;
+}
+
+#studentList{
+    width: 70%;
+}
+
+legend{
+    font-weight:800; 
+    font-size:larger; 
+    color: rgb(206, 206, 206); 
+    text-shadow: -0.5px 0 rgb(174, 173, 173); 
+    font-style: italic;
+}
+
+form label{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 700;
+}
+form input{
+    width: 90%;
+    height: 25px;
+}
+form span{
+    color: rgb(219, 10, 10);
+    text-shadow: 0.5px 0 rgb(174, 173, 173);
+    font-weight: 400;
+    font-style: italic;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+}
+
+form #submitBtn{
+    width: 100%; 
+    font-size: larger;
+    letter-spacing: 5px;
+}
+
+#updateBtn{
+    width: 100%; 
+    font-size: larger;
+    letter-spacing: 5px;
+    display: none;
+}
+
+.buttons{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight:800;
+    height: 35px;
+}
+
+.buttons:hover,.buttons:focus{
+    background-color: rgba(0, 0, 0, 0.61);
+    color: rgb(255, 255, 255);
+    text-shadow: 0.5px 0.5px rgb(87, 86, 86);
+}
+
+/* DISPLAY SECTION STYLING */
+#studentDiv{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    width: 100%;
+    /* flex to display grid-containers line-by-line */
+    display: flex;
+    flex-direction: column;
+    
+}
+
+/* grid to store LIST items in 5 columns */
+.sgrid{
+    display: grid;
+    grid-template-columns: 12% 25% 25% 15% 21%;
+    gap: 3px;
+    
+    
+}
+
+.item{
+    background-color: white;
+    border: 1px solid rgba(57, 57, 57, 0.852);
+    padding: 2px;
+    padding-bottom: 0;
+    text-align: center;
+    
+}
+.h{
+    background-color: rgba(0, 0, 0, 0.61);
+    color: rgb(255, 255, 255);
+    text-shadow: 0.5px 0.5px rgb(87, 86, 86);
+    font-weight:800;
+    height: 35px;
+    
+}
+
+.s{
+    color: black;
+    font-weight:500;
+    height: 30px;
+}
+
+.email{
+    font-size: 14px;
+}
+
+.btn{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight:800;
+    height: 25px;
+    background-color: rgba(0, 0, 0, 0.781);
+    color: rgb(255, 255, 255);
+    text-shadow: 0.5px 0.5px rgb(87, 86, 86);
+}
+
+.btn:hover,.btn:focus{
+    background-color: rgb(197, 197, 197);
+    color: black;
+}
+
+/* VERTICAL SCROLL BAR STYLING*/
+
+.scroll-container { 
+    height: 180px; 
+    overflow-x: auto;
+    overflow-y: auto; 
+} 
+
+.scroll-container::-webkit-scrollbar { 
+    width: 10px; 
+} 
+
+.scroll-container::-webkit-scrollbar-track { 
+    background: rgb(87, 86, 86); 
+} 
+
+.scroll-container::-webkit-scrollbar-thumb { 
+    background: rgba(24, 24, 24, 0.674);
+    
+} 
+
+.scroll-container::-webkit-scrollbar-thumb:hover { 
+    background: #040404; 
+} 
+
+@media only screen and (max-width : 900px) {
+    main{
+        width:screen;
+        /* flex to display both form and display top-and-bottom */
+        display: flex; 
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 30px;
+       
+    }
+
+    #studentForm{
+        width: 80%;
+    }
+    
+    #studentList{
+        width: 98%;
+    }
+}
